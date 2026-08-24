@@ -20,8 +20,10 @@ go run main.go
 
 ## Features
 
-* **Channel removal system.
-* **Create +100 channels
-* **Easy to Use
-* **CLI Interface:** Clean terminal interface with built-in screen clearing.
+* Channel removal system.
+* Create +100 channels
+* Easy to Use
+* CLI Interface:** Clean terminal interface with built-in screen clearing.
 
+For educational purposes.
+Give me a star :)
