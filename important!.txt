@@ -1,0 +1,3 @@
+EN:I forgot to explain that the bot selects the first server it finds, so be careful to have the bot on more than one server, I recommend putting only the bot on the server you are going to destroy.
+
+ES: Se me olvido explicar que el bot selecciona el primer servidor que encuentra, asi que cuidado con tener el bot en mas de un servidor, recomiendo solo meter al bot a el servidor que vas a destruir.
