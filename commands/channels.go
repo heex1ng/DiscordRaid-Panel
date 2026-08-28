@@ -51,7 +51,7 @@ func DeleteChannels(s *discordgo.Session) {
 
 		newCh, err := s.GuildChannelCreate(guildID, channelName, discordgo.ChannelTypeGuildText)
 		if err != nil {
-			fmt.Printf("❌ Error al crear canal %d: %v\n", i, err)
+			fmt.Printf("❌ Error creating channels %d: %v\n", i, err)
 			continue
 		}
 
@@ -63,7 +63,7 @@ func DeleteChannels(s *discordgo.Session) {
 				if err != nil {
 					break
 				}
-				time.Sleep(350 * time.Millisecond)
+				time.Sleep(550 * time.Millisecond)
 			}
 		}(newCh.ID)
 

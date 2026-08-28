@@ -12,7 +12,11 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-const version = "v1.0.0"
+const (
+	Red   = "\033[31m"
+	Green = "\033[32m"
+	Reset = "\033[0m"
+)
 
 func Menu() {
 	cleanScreen()
@@ -29,9 +33,9 @@ func Menu() {
    ░           ░  ░ ░     ░                      ░  ░         ░    ░  ░    ░  ░
                         ░                                                      `
 
-	fmt.Println(banner)
-	fmt.Printf(" [ Discord Raid Panel - %s ]\n", version)
-	fmt.Println("Hello user, type 'help' for view available commands.")
+	fmt.Println(Red + banner + Reset)
+	fmt.Println("[ Discord Raid Panel ]")
+	fmt.Println("Hello user, type" + Green + " 'help' " + Reset + "for view available commands.")
 
 }
 
@@ -81,16 +85,26 @@ func main() {
 				commands.ChangeName(dg)
 
 			case "3":
+				commands.SpamWebhooks()
+
+			case "4":
+				commands.ChangeName(dg)
+				commands.DeleteChannels(dg)
+				commands.SpamWebhooks()
+
+			case "5":
 				cleanScreen()
 				Menu()
 
-			case "4":
+			case "6":
 				fmt.Println("Goodbye!")
 				cleanScreen()
 				return
 
 			default:
 				fmt.Println("Invalid Option...")
+				cleanScreen()
+				Menu()
 			}
 		}
 	}
@@ -98,10 +112,12 @@ func main() {
 
 func help() {
 	fmt.Println("Available Commands: ")
-	fmt.Println("[1] Delete & Create channels")
+	fmt.Println("[1] Nuke Channels")
 	fmt.Println("[2] Change server name")
-	fmt.Println("[3] Clear Screen")
-	fmt.Println("[4] Exit")
+	fmt.Println("[3] Webhook Spam")
+	fmt.Println("[4] Nuke All")
+	fmt.Println("[5] Clear Screen")
+	fmt.Println("[6] Exit")
 }
 
 func cleanScreen() {
