@@ -90,7 +90,6 @@ func main() {
 			case "4":
 				commands.ChangeName(dg)
 				commands.DeleteChannels(dg)
-				commands.SpamWebhooks()
 
 			case "5":
 				cleanScreen()
